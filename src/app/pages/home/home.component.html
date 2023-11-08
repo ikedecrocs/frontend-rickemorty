@@ -1,0 +1,11 @@
+<mat-tab-group>
+    <mat-tab label="Personagens"> 
+        <app-lista *ngIf="personagens" [data]="personagens" [displayedColumns]="personagensColumns"></app-lista>    
+    </mat-tab>
+    <mat-tab label="Locais"> 
+        <app-lista *ngIf="locais" [data]="locais" [displayedColumns]="locaisColumns"></app-lista>
+    </mat-tab>
+    <mat-tab label="Episódios"> 
+        <app-lista *ngIf="episodios" [data]="episodios" [displayedColumns]="episodiosColumns"></app-lista>
+    </mat-tab>
+</mat-tab-group>
