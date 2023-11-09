@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { IService } from '../interface/iservice';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EpisodiosService {
+export class EpisodiosService implements IService{
 
   apiUrl: string = environment.apiUrl;
 
@@ -14,8 +15,8 @@ export class EpisodiosService {
     private httpClient: HttpClient
   ) { }
 
-  listar (): Observable<any> {
-    return this.httpClient.get<any[]>(`${this.apiUrl}/episode`);
+  listar (page: number): Observable<any> {
+    return this.httpClient.get<any[]>(`${this.apiUrl}/episode/?page=${page}`);
   }
   
 }

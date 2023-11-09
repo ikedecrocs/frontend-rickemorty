@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TableHeader } from 'src/app/core/model/table-header.model';
 import { EpisodiosService } from 'src/app/core/services/episodios.service';
 import { LocaisService } from 'src/app/core/services/locais.service';
@@ -9,9 +9,11 @@ import { PersonagensService } from 'src/app/core/services/personagens.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  personagens!: any[];
+  // Criando Array para preenchimento dos nomes das colunas e possibilitar o 
+  // resgate dos dados dentro da lista
+
   personagensColumns: TableHeader[] = [
     { id: "id", display: "ID" },
     { id: "name", display: "Nome" },
@@ -20,7 +22,6 @@ export class HomeComponent implements OnInit {
     { id: "gender", display: "Genêro" },
   ];
 
-  locais!: any[];
   locaisColumns: TableHeader[] = [
     { id: "id", display: "ID" },
     { id: "name", display: "Nome" },
@@ -28,7 +29,6 @@ export class HomeComponent implements OnInit {
     { id: "dimension", display: "Dimensão" },
   ];
 
-  episodios!: any[];
   episodiosColumns: TableHeader[] = [
     { id: "id", display: "ID" },
     { id: "name", display: "Nome" },
@@ -36,44 +36,12 @@ export class HomeComponent implements OnInit {
     { id: "episode", display: "Espisódio" },
   ];
 
+  // Injeção das services para envio ao componente
+
   constructor(
-    private personagensService: PersonagensService,
-    private locaisService: LocaisService,
-    private episodiosService: EpisodiosService,
+    public personagensService: PersonagensService,
+    public locaisService: LocaisService,
+    public episodiosService: EpisodiosService,
   ) { }
-
-  ngOnInit(): void {
-    this.listarTodos();
-  }
-
-  listarTodos () {
-    this.listarPersonagens();
-    this.listarLocais();
-    this.listarEpisodios();
-  }
-
-  listarPersonagens () {
-    this.personagensService.listar().subscribe(
-      data => {
-        this.personagens = data.results;
-      }
-    )
-  }
-
-  listarLocais () {
-    this.locaisService.listar().subscribe(
-      data => {
-        this.locais = data.results;
-      }
-    )
-  }
-
-  listarEpisodios () {
-    this.episodiosService.listar().subscribe(
-      data => {
-        this.episodios = data.results;
-      }
-    )
-  }
 
 }

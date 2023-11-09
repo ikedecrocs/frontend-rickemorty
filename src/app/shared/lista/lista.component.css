@@ -1,0 +1,9 @@
+mat-table {
+    display: table;
+}
+
+/* Altura limitada temporariamente para testes com scroll infinito */
+.table-lista {
+    height: 500px;
+    overflow: auto;
+}
