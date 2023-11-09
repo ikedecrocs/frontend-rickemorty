@@ -1,13 +1,20 @@
+<!-- Filtro de pesquisa -->
+
+<mat-form-field>
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Digite o que deseja pesquisar" #input>
+</mat-form-field>
+
 <!-- Tabs das diferentes listas providas pela API -->
 
 <mat-tab-group>
     <mat-tab label="Personagens"> 
-        <app-lista [service]="personagensService" [displayedColumns]="personagensColumns"></app-lista>    
+        <app-lista [filtro]="filtro" [service]="personagensService" [displayedColumns]="personagensColumns"></app-lista>    
     </mat-tab>
     <mat-tab label="Locais"> 
-        <app-lista [service]="locaisService" [displayedColumns]="locaisColumns"></app-lista>
+        <app-lista [filtro]="filtro" [service]="locaisService" [displayedColumns]="locaisColumns"></app-lista>
     </mat-tab>
     <mat-tab label="Episódios"> 
-        <app-lista [service]="episodiosService" [displayedColumns]="episodiosColumns"></app-lista>
+        <app-lista [filtro]="filtro" [service]="episodiosService" [displayedColumns]="episodiosColumns"></app-lista>
     </mat-tab>
 </mat-tab-group>

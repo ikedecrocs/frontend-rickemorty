@@ -4,6 +4,6 @@ mat-table {
 
 /* Altura limitada temporariamente para testes com scroll infinito */
 .table-lista {
-    height: 500px;
+    height: 900px;
     overflow: auto;
 }

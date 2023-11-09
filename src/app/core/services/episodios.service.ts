@@ -15,8 +15,12 @@ export class EpisodiosService implements IService{
     private httpClient: HttpClient
   ) { }
 
-  listar (page: number): Observable<any> {
-    return this.httpClient.get<any[]>(`${this.apiUrl}/episode/?page=${page}`);
+  listar (page: number, filtro?: String): Observable<any> {
+    if (filtro) {
+      return this.httpClient.get<any[]>(`${this.apiUrl}/episode/?page=${page}&name=${filtro}`);
+    } else {
+      return this.httpClient.get<any[]>(`${this.apiUrl}/episode/?page=${page}`);
+    }
   }
   
 }

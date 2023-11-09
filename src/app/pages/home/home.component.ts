@@ -36,6 +36,10 @@ export class HomeComponent {
     { id: "episode", display: "Espisódio" },
   ];
 
+  // String para receber o filtro
+
+  filtro: String = "";
+
   // Injeção das services para envio ao componente
 
   constructor(
@@ -43,5 +47,9 @@ export class HomeComponent {
     public locaisService: LocaisService,
     public episodiosService: EpisodiosService,
   ) { }
+
+  applyFilter(e: any) {
+    this.filtro = e.target.value;
+  }
 
 }

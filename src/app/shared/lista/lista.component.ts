@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { IService } from 'src/app/core/interface/iservice';
 import { TableHeader } from 'src/app/core/model/table-header.model';
 
@@ -7,7 +7,7 @@ import { TableHeader } from 'src/app/core/model/table-header.model';
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent implements OnInit {
+export class ListaComponent implements OnInit, OnChanges {
 
   /*
     Componente para listagem. Recebe as colunas que devem ser exibidas como "displayedColumns" e
@@ -16,6 +16,7 @@ export class ListaComponent implements OnInit {
 
   @Input() displayedColumns!: TableHeader[];
   @Input() service!: IService;
+  @Input() filtro!: String;
   data: any[] = [];
   page: number = 1;
   finalPage: number = 1;
@@ -26,6 +27,14 @@ export class ListaComponent implements OnInit {
     // Mapping realizado no OnInit pois não é possível realizá-lo diretamente no destino (HTML)
     this.columnsToDisplay = this.displayedColumns.map((column) => (column).id);
     this.listar(1);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['filtro']) {
+      this.data = [];
+      this.page = 1;
+      this.listar(this.page);
+    }
   }
 
   /* 
@@ -54,12 +63,21 @@ export class ListaComponent implements OnInit {
   */
 
   listar (page: number) {
-    this.service.listar(page).subscribe(
-      data => {
-        this.data = this.data.concat(data.results);
-        this.finalPage = data.info.pages;
-      }
-    ); 
+    if (this.filtro != "") {
+      this.service.listar(page, this.filtro).subscribe(
+        data => {
+          this.data = this.data.concat(data.results);
+          this.finalPage = data.info.pages;
+        }
+      );
+    } else {
+      this.service.listar(page).subscribe(
+        data => {
+          this.data = this.data.concat(data.results);
+          this.finalPage = data.info.pages;
+        }
+      ); 
+    }
   }
 
 }

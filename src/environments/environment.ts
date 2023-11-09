@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: "https://rickandmortyapi.com/api/"
+    apiUrl: "https://rickandmortyapi.com/api"
 };
