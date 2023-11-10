@@ -7,14 +7,14 @@
 
 <!-- Tabs das diferentes listas providas pela API -->
 
-<mat-tab-group>
+<mat-tab-group (selectedIndexChange)="changeSelectedTab($event)">
     <mat-tab label="Personagens"> 
-        <app-lista [filtro]="filtro" [service]="personagensService" [displayedColumns]="personagensColumns"></app-lista>    
+        <app-lista *ngIf="selected == 0" [filtro]="filtro" [service]="personagensService" [displayedColumns]="personagensColumns"></app-lista>    
     </mat-tab>
     <mat-tab label="Locais"> 
-        <app-lista [filtro]="filtro" [service]="locaisService" [displayedColumns]="locaisColumns"></app-lista>
+        <app-lista *ngIf="selected == 1" [filtro]="filtro" [service]="locaisService" [displayedColumns]="locaisColumns"></app-lista>
     </mat-tab>
     <mat-tab label="Episódios"> 
-        <app-lista [filtro]="filtro" [service]="episodiosService" [displayedColumns]="episodiosColumns"></app-lista>
+        <app-lista *ngIf="selected == 2" [filtro]="filtro" [service]="episodiosService" [displayedColumns]="episodiosColumns"></app-lista>
     </mat-tab>
 </mat-tab-group>

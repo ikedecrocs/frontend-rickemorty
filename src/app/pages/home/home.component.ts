@@ -11,6 +11,8 @@ import { PersonagensService } from 'src/app/core/services/personagens.service';
 })
 export class HomeComponent {
 
+  selected: number = 0;
+
   // Criando Array para preenchimento dos nomes das colunas e possibilitar o 
   // resgate dos dados dentro da lista
 
@@ -50,6 +52,10 @@ export class HomeComponent {
 
   applyFilter(e: any) {
     this.filtro = e.target.value;
+  }
+
+  changeSelectedTab (e: any) {
+    this.selected = e;
   }
 
 }
