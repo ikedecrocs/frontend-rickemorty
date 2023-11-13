@@ -11,12 +11,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { MatInputModule } from '@angular/material/input';
+import { DetalhesComponent } from './pages/detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
-    HomeComponent
+    HomeComponent,
+    DetalhesComponent
   ],
   imports: [
     BrowserModule,

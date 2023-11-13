@@ -1,0 +1,30 @@
+<div [ngSwitch]="tipoDado" *ngIf="dado">
+    <div *ngSwitchCase=0>
+        <img [src]="dado.image">
+        <p>ID: {{dado.id}}</p>
+        <p>Nome: {{dado.name}}</p>
+        <p>Status: {{dado.status}}</p>
+        <p>Espécie: {{dado.species}}</p>
+        <p>Tipo: {{dado.type}}</p>
+        <p>Genêro: {{dado.gender}}</p>
+        <p (click)="redirecionar(dado.origin.url, 1)">Origem: {{dado.origin.name}}</p>
+        <p (click)="redirecionar(dado.location.url, 1)">Visto pela última vez em: {{dado.location.name}}</p>
+        <ul>Episódios em que aparece:</ul>
+        <app-lista [displayedColumns]="episodiosColumns" [data]="listaSecundaria" [tipoDado]="2" *ngIf="this.listaSecundaria"></app-lista>
+            
+    </div>
+    <div *ngSwitchCase=1>
+        <p>ID: {{dado.id}}</p>
+        <p>Nome: {{dado.name}}</p>
+        <p>Tipo: {{dado.type}}</p>
+        <p>Dimensão: {{dado.dimension}}</p>
+        <app-lista [displayedColumns]="personagensColumns" [data]="listaSecundaria" [tipoDado]="0" *ngIf="this.listaSecundaria"></app-lista>
+    </div>
+    <div *ngSwitchCase=2>
+        <p>ID: {{dado.id}}</p>
+        <p>Nome: {{dado.name}}</p>
+        <p>Data de lançamento: {{dado.air_date}}</p>
+        <p>Episódio: {{dado.episode}}</p>
+        <app-lista [displayedColumns]="personagensColumns" [data]="listaSecundaria" [tipoDado]="0" *ngIf="this.listaSecundaria"></app-lista>
+    </div>
+</div>

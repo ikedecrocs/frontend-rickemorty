@@ -1,5 +1,5 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { IService } from 'src/app/core/interface/iservice';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { TableHeader } from 'src/app/core/model/table-header.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { TableHeader } from 'src/app/core/model/table-header.model';
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent implements OnInit, OnChanges {
+export class ListaComponent implements OnInit {
 
   /*
     Componente para listagem. Recebe as colunas que devem ser exibidas como "displayedColumns" e
@@ -15,26 +15,20 @@ export class ListaComponent implements OnInit, OnChanges {
   */
 
   @Input() displayedColumns!: TableHeader[];
-  @Input() service!: IService;
-  @Input() filtro!: String;
-  data: any[] = [];
-  page: number = 1;
-  finalPage: number = 1;
+  @Input() tipoDado!: number;
+  @Input() data!: any[];
+  @Output() scrollFimPagina = new EventEmitter();
 
   columnsToDisplay: String[] = [];
+
+  constructor (
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     // Mapping realizado no OnInit pois não é possível realizá-lo diretamente no destino (HTML)
     this.columnsToDisplay = this.displayedColumns.map((column) => (column).id);
-    this.listar(1);
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['filtro']) {
-      this.data = [];
-      this.page = 1;
-      this.listar(this.page);
-    }
+    console.log(this.data);
   }
 
   /* 
@@ -51,9 +45,8 @@ export class ListaComponent implements OnInit, OnChanges {
     // Buffer de 200px para o scroll até o final da página
     const buffer = 200;
     const limit = tableScrollHeight - tableViewHeight - buffer;
-    if (scrollLocation > limit && this.page < this.finalPage) {
-      this.page++;
-      this.listar(this.page);
+    if (scrollLocation > limit) {
+      this.scrollFimPagina.emit(this.tipoDado);
     }
   }
 
@@ -62,22 +55,9 @@ export class ListaComponent implements OnInit, OnChanges {
     input do componente.
   */
 
-  listar (page: number) {
-    if (this.filtro != "") {
-      this.service.listar(page, this.filtro).subscribe(
-        data => {
-          this.data = this.data.concat(data.results);
-          this.finalPage = data.info.pages;
-        }
-      );
-    } else {
-      this.service.listar(page).subscribe(
-        data => {
-          this.data = this.data.concat(data.results);
-          this.finalPage = data.info.pages;
-        }
-      ); 
-    }
+  abrirDetalhes(id: number) {
+    console.log(`Abrindo nova página: detalhes/${this.tipoDado}/${id}`);
+    this.router.navigate([`detalhes/${this.tipoDado}/${id}`]);
   }
 
 }

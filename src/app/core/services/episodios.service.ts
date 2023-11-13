@@ -22,5 +22,13 @@ export class EpisodiosService implements IService{
       return this.httpClient.get<any[]>(`${this.apiUrl}/episode/?page=${page}`);
     }
   }
+
+  listarUnico (id: number): Observable<any> {
+    return this.httpClient.get<any[]>(`${this.apiUrl}/episode/${id}`);
+  }
+
+  listarUnicoPorUrl (url: string): Observable<any> {
+    return this.httpClient.get<any[]>(url);
+  }
   
 }

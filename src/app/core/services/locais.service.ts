@@ -22,5 +22,13 @@ export class LocaisService implements IService {
       return this.httpClient.get<any[]>(`${this.apiUrl}/location/?page=${page}`);
     }
   }
+
+  listarUnico (id: number): Observable<any> {
+    return this.httpClient.get<any[]>(`${this.apiUrl}/location/${id}`);
+  }
+
+  listarUnicoPorUrl (url: string): Observable<any> {
+    return this.httpClient.get<any[]>(url);
+  }
   
 }

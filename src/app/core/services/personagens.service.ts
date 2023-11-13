@@ -23,4 +23,12 @@ export class PersonagensService implements IService {
     }
   }
 
+  listarUnico (id: number): Observable<any> {
+    return this.httpClient.get<any[]>(`${this.apiUrl}/character/${id}`);
+  }
+
+  listarUnicoPorUrl (url: string): Observable<any> {
+    return this.httpClient.get<any[]>(url);
+  }
+
 }

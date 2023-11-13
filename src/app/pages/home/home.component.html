@@ -9,12 +9,12 @@
 
 <mat-tab-group (selectedIndexChange)="changeSelectedTab($event)">
     <mat-tab label="Personagens"> 
-        <app-lista *ngIf="selected == 0" [filtro]="filtro" [service]="personagensService" [displayedColumns]="personagensColumns"></app-lista>    
+        <app-lista *ngIf="selected == 0" [tipoDado]="0" [data]="personagensDados" [displayedColumns]="personagensColumns" (scrollFimPagina)="scroll($event)"></app-lista>    
     </mat-tab>
     <mat-tab label="Locais"> 
-        <app-lista *ngIf="selected == 1" [filtro]="filtro" [service]="locaisService" [displayedColumns]="locaisColumns"></app-lista>
+        <app-lista *ngIf="selected == 1" [tipoDado]="1" [data]="locaisDados" [displayedColumns]="locaisColumns" (scrollFimPagina)="scroll($event)"></app-lista>
     </mat-tab>
     <mat-tab label="Episódios"> 
-        <app-lista *ngIf="selected == 2" [filtro]="filtro" [service]="episodiosService" [displayedColumns]="episodiosColumns"></app-lista>
+        <app-lista *ngIf="selected == 2" [tipoDado]="2" [data]="episodiosDados" [displayedColumns]="episodiosColumns" (scrollFimPagina)="scroll($event)"></app-lista>
     </mat-tab>
 </mat-tab-group>
