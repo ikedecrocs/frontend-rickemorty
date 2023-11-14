@@ -1,30 +1,34 @@
-<div [ngSwitch]="tipoDado" *ngIf="dado">
+<div [ngSwitch]="tipoDado" *ngIf="dado" class="px-5 py-2">
     <div *ngSwitchCase=0>
-        <img [src]="dado.image">
-        <p>ID: {{dado.id}}</p>
-        <p>Nome: {{dado.name}}</p>
-        <p>Status: {{dado.status}}</p>
-        <p>Espécie: {{dado.species}}</p>
-        <p>Tipo: {{dado.type}}</p>
-        <p>Genêro: {{dado.gender}}</p>
-        <p (click)="redirecionar(dado.origin.url, 1)">Origem: {{dado.origin.name}}</p>
-        <p (click)="redirecionar(dado.location.url, 1)">Visto pela última vez em: {{dado.location.name}}</p>
-        <ul>Episódios em que aparece:</ul>
+        <div class="text-center">
+            <img [src]="dado.image">   
+        </div>
+        <p><b>ID:</b> {{dado.id}}</p>
+        <p><b>Nome:</b> {{dado.name}}</p>
+        <p><b>Status:</b> {{dado.status}}</p>
+        <p><b>Espécie:</b> {{dado.species}}</p>
+        <p><b>Tipo:</b> {{dado.type}}</p>
+        <p><b>Genêro:</b> {{dado.gender}}</p>
+        <p (click)="redirecionar(dado.origin.url, 1)" class="texto-link"><b>Origem:</b> {{dado.origin.name}}</p>
+        <p (click)="redirecionar(dado.location.url, 1)" class="texto-link"><b>Visto pela última vez em:</b> {{dado.location.name}}</p>
+        <p><b>Episódios em que aparece:</b></p>
         <app-lista [displayedColumns]="episodiosColumns" [data]="listaSecundaria" [tipoDado]="2" *ngIf="this.listaSecundaria"></app-lista>
             
     </div>
     <div *ngSwitchCase=1>
-        <p>ID: {{dado.id}}</p>
-        <p>Nome: {{dado.name}}</p>
-        <p>Tipo: {{dado.type}}</p>
-        <p>Dimensão: {{dado.dimension}}</p>
+        <p><b>ID:</b> {{dado.id}}</p>
+        <p><b>Nome:</b> {{dado.name}}</p>
+        <p><b>Tipo:</b> {{dado.type}}</p>
+        <p><b>Dimensão:</b> {{dado.dimension}}</p>
+        <p><b>Residentes:</b></p>
         <app-lista [displayedColumns]="personagensColumns" [data]="listaSecundaria" [tipoDado]="0" *ngIf="this.listaSecundaria"></app-lista>
     </div>
     <div *ngSwitchCase=2>
-        <p>ID: {{dado.id}}</p>
-        <p>Nome: {{dado.name}}</p>
-        <p>Data de lançamento: {{dado.air_date}}</p>
-        <p>Episódio: {{dado.episode}}</p>
+        <p><b>ID:</b> {{dado.id}}</p>
+        <p><b>Nome:</b> {{dado.name}}</p>
+        <p><b>Data de lançamento:</b> {{dado.air_date}}</p>
+        <p><b>Episódio:</b> {{dado.episode}}</p>
+        <p><b>Personagens neste episódio:</b></p>
         <app-lista [displayedColumns]="personagensColumns" [data]="listaSecundaria" [tipoDado]="0" *ngIf="this.listaSecundaria"></app-lista>
     </div>
 </div>

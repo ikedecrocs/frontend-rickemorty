@@ -12,13 +12,16 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { MatInputModule } from '@angular/material/input';
 import { DetalhesComponent } from './pages/detalhes/detalhes.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
     HomeComponent,
-    DetalhesComponent
+    DetalhesComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { DetalhesComponent } from './pages/detalhes/detalhes.component';
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

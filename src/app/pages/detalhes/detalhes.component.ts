@@ -76,6 +76,7 @@ export class DetalhesComponent implements OnInit {
   }
 
   recuperarLista() {
+    this.listaSecundaria = [];
     switch(this.tipoDado) {
       case 0:
         for (let episodio of this.dado.episode) {

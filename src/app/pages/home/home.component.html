@@ -1,20 +1,24 @@
-<!-- Filtro de pesquisa -->
+<div class="d-flex flex-column align-center mx-5 my-4 align-items-center">
 
-<mat-form-field>
-    <mat-label>Filtro</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Digite o que deseja pesquisar" #input>
-</mat-form-field>
+    <!-- Filtro de pesquisa -->
 
-<!-- Tabs das diferentes listas providas pela API -->
+    <mat-form-field class="align-middle w-50">
+        <mat-label >Pesquisar</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Digite o que deseja pesquisar" #input>
+    </mat-form-field>
 
-<mat-tab-group (selectedIndexChange)="changeSelectedTab($event)">
-    <mat-tab label="Personagens"> 
-        <app-lista *ngIf="selected == 0" [tipoDado]="0" [data]="personagensDados" [displayedColumns]="personagensColumns" (scrollFimPagina)="scroll($event)"></app-lista>    
-    </mat-tab>
-    <mat-tab label="Locais"> 
-        <app-lista *ngIf="selected == 1" [tipoDado]="1" [data]="locaisDados" [displayedColumns]="locaisColumns" (scrollFimPagina)="scroll($event)"></app-lista>
-    </mat-tab>
-    <mat-tab label="Episódios"> 
-        <app-lista *ngIf="selected == 2" [tipoDado]="2" [data]="episodiosDados" [displayedColumns]="episodiosColumns" (scrollFimPagina)="scroll($event)"></app-lista>
-    </mat-tab>
-</mat-tab-group>
+    <!-- Tabs das diferentes listas providas pela API -->
+
+    <mat-tab-group (selectedIndexChange)="changeSelectedTab($event)" class="w-75 align-middle">
+        <mat-tab label="Personagens"> 
+            <app-lista *ngIf="selected == 0" [tipoDado]="0" [data]="personagensDados" [displayedColumns]="personagensColumns" (scrollFimPagina)="scroll($event)"></app-lista>    
+        </mat-tab>
+        <mat-tab label="Locais"> 
+            <app-lista *ngIf="selected == 1" [tipoDado]="1" [data]="locaisDados" [displayedColumns]="locaisColumns" (scrollFimPagina)="scroll($event)"></app-lista>
+        </mat-tab>
+        <mat-tab label="Episódios"> 
+            <app-lista *ngIf="selected == 2" [tipoDado]="2" [data]="episodiosDados" [displayedColumns]="episodiosColumns" (scrollFimPagina)="scroll($event)"></app-lista>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>
