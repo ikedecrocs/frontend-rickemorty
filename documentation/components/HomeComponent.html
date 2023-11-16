@@ -1,0 +1,1373 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend-rickemorty documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">frontend-rickemorty documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  HomeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/home/home.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente para a página principal da aplicação.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-home</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./home.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./home.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#episodiosColumns" >episodiosColumns</a>
+                            </li>
+                            <li>
+                                <a href="#episodiosDados" >episodiosDados</a>
+                            </li>
+                            <li>
+                                <a href="#filtro" >filtro</a>
+                            </li>
+                            <li>
+                                <a href="#finalPage" >finalPage</a>
+                            </li>
+                            <li>
+                                <a href="#locaisColumns" >locaisColumns</a>
+                            </li>
+                            <li>
+                                <a href="#locaisDados" >locaisDados</a>
+                            </li>
+                            <li>
+                                <a href="#page" >page</a>
+                            </li>
+                            <li>
+                                <a href="#personagensColumns" >personagensColumns</a>
+                            </li>
+                            <li>
+                                <a href="#personagensDados" >personagensDados</a>
+                            </li>
+                            <li>
+                                <a href="#selected" >selected</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#applyFilter" >applyFilter</a>
+                            </li>
+                            <li>
+                                <a href="#changeSelectedTab" >changeSelectedTab</a>
+                            </li>
+                            <li>
+                                <a href="#listar" >listar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#scroll" >scroll</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(personagensService: <a href="../injectables/PersonagensService.html" target="_self">PersonagensService</a>, locaisService: <a href="../injectables/LocaisService.html" target="_self">LocaisService</a>, episodiosService: <a href="../injectables/EpisodiosService.html" target="_self">EpisodiosService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/app/pages/home/home.component.ts:91</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>personagensService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PersonagensService.html" target="_self" >PersonagensService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>locaisService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocaisService.html" target="_self" >LocaisService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>episodiosService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EpisodiosService.html" target="_self" >EpisodiosService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="applyFilter"></a>
+                    <span class="name">
+                        <span ><b>applyFilter</b></span>
+                        <a href="#applyFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>applyFilter(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="173"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:173</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método acionado quando o filtro é atualizado, limpando os dados atuais e consumindo os novos com a nova pesquisa.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>e</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeSelectedTab"></a>
+                    <span class="name">
+                        <span ><b>changeSelectedTab</b></span>
+                        <a href="#changeSelectedTab"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeSelectedTab(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="187"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:187</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método acionado quando a tab é atualizada. Quando o selected está numa lista, as outras não são carregadas</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>e</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listar"></a>
+                    <span class="name">
+                        <span ><b>listar</b></span>
+                        <a href="#listar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>listar(tipoDado: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="111"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:111</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método para consumir os dados da API e preencher os dados na aplicação.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tipoDado</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <p>Number que receberá o tipo de dado que deve ser preenchido, sendo 0 = personagem, 1 = local, 2 = episodio</p>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>page</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <p>Number com a página atual da listagem</p>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="99"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="scroll"></a>
+                    <span class="name">
+                        <span ><b>scroll</b></span>
+                        <a href="#scroll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>scroll(tipoDado: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="196"
+                                    class="link-to-prism">src/app/pages/home/home.component.ts:196</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método acionado quando o componente de lista disparar um scroll. Carrega novos dados, caso hajam, e adicionam a lista.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tipoDado</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <p>Number que receberá o tipo de dado que deve ser preenchido, sendo 0 = personagem, 1 = local, 2 = episodio</p>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="episodiosColumns"></a>
+                    <span class="name">
+                        <span ><b>episodiosColumns</b></span>
+                        <a href="#episodiosColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/TableHeader.html" target="_self" >TableHeader[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>columnsDisplayEpisode</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/pages/home/home.component.ts:84</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Ids e Displays dos headers das colunas dentro da lista de episodios.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="episodiosDados"></a>
+                    <span class="name">
+                        <span ><b>episodiosDados</b></span>
+                        <a href="#episodiosDados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/pages/home/home.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Dados que serão exibidos na lista de episodios.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filtro"></a>
+                    <span class="name">
+                        <span ><b>filtro</b></span>
+                        <a href="#filtro"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/app/pages/home/home.component.ts:91</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>String que receberá o valor do filtro para realizar a filtragem nos dados da lista.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="finalPage"></a>
+                    <span class="name">
+                        <span ><b>finalPage</b></span>
+                        <a href="#finalPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[ 0, 0, 0 ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/pages/home/home.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Array para guardar a página final da lista na hora da paginação.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="locaisColumns"></a>
+                    <span class="name">
+                        <span ><b>locaisColumns</b></span>
+                        <a href="#locaisColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/TableHeader.html" target="_self" >TableHeader[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>columnsDisplayLocation</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/pages/home/home.component.ts:70</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Ids e Displays dos headers das colunas dentro da lista de locais.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="locaisDados"></a>
+                    <span class="name">
+                        <span ><b>locaisDados</b></span>
+                        <a href="#locaisDados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/pages/home/home.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Dados que serão exibidos na lista de locais.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="page"></a>
+                    <span class="name">
+                        <span ><b>page</b></span>
+                        <a href="#page"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[ 1, 1, 1 ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/pages/home/home.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Array para a contagem da paginação das listas.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="personagensColumns"></a>
+                    <span class="name">
+                        <span ><b>personagensColumns</b></span>
+                        <a href="#personagensColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/TableHeader.html" target="_self" >TableHeader[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>columnsDisplayCharacter</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/pages/home/home.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Ids e Displays dos headers das colunas dentro da lista de personagens.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="personagensDados"></a>
+                    <span class="name">
+                        <span ><b>personagensDados</b></span>
+                        <a href="#personagensDados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/pages/home/home.component.ts:49</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Dados que serão exibidos na lista de personagens.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selected"></a>
+                    <span class="name">
+                        <span ><b>selected</b></span>
+                        <a href="#selected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/pages/home/home.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Tab selecionado dentro da aplicação.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { columnsDisplayCharacter, columnsDisplayEpisode, columnsDisplayLocation } from &#x27;src/app/core/consts/columns-display&#x27;;
+import { TableHeader } from &#x27;src/app/core/model/table-header.model&#x27;;
+import { EpisodiosService } from &#x27;src/app/core/services/episodios.service&#x27;;
+import { LocaisService } from &#x27;src/app/core/services/locais.service&#x27;;
+import { PersonagensService } from &#x27;src/app/core/services/personagens.service&#x27;;
+
+/**
+ * Componente para a página principal da aplicação.
+ *
+ * @export
+ * @class HomeComponent
+ * @typedef {HomeComponent}
+ * @implements {OnInit}
+ */
+@Component({
+  selector: &#x27;app-home&#x27;,
+  templateUrl: &#x27;./home.component.html&#x27;,
+  styleUrls: [&#x27;./home.component.css&#x27;]
+})
+export class HomeComponent implements OnInit {
+
+  /**
+   * Tab selecionado dentro da aplicação.
+   *
+   * @type {number}
+   */
+  selected: number &#x3D; 0;
+
+  /**
+   * Array para a contagem da paginação das listas.
+   *
+   * @type {number[]}
+   */
+  page: number[] &#x3D; [ 1, 1, 1 ];
+
+  /**
+   * Array para guardar a página final da lista na hora da paginação.
+   *
+   * @type {number[]}
+   */
+  finalPage: number[] &#x3D; [ 0, 0, 0 ];
+
+  /**
+   * Dados que serão exibidos na lista de personagens.
+   *
+   * @type {any[]}
+   */
+  personagensDados: any[] &#x3D; [];
+
+  /**
+   * Ids e Displays dos headers das colunas dentro da lista de personagens.
+   *
+   * @type {TableHeader[]}
+   */
+  personagensColumns: TableHeader[] &#x3D; columnsDisplayCharacter;
+
+  /**
+   * Dados que serão exibidos na lista de locais.
+   *
+   * @type {any[]}
+   */
+  locaisDados: any[] &#x3D; [];
+
+  /**
+   * Ids e Displays dos headers das colunas dentro da lista de locais.
+   *
+   * @type {TableHeader[]}
+   */
+  locaisColumns: TableHeader[] &#x3D; columnsDisplayLocation;
+
+  /**
+   * Dados que serão exibidos na lista de episodios.
+   *
+   * @type {any[]}
+   */
+  episodiosDados: any[] &#x3D; [];
+
+  /**
+   * Ids e Displays dos headers das colunas dentro da lista de episodios.
+   *
+   * @type {TableHeader[]}
+   */
+  episodiosColumns: TableHeader[] &#x3D; columnsDisplayEpisode
+
+  /**
+   * String que receberá o valor do filtro para realizar a filtragem nos dados da lista.
+   *
+   * @type {String}
+   */
+  filtro: String &#x3D; &quot;&quot;;
+
+  constructor(
+    private personagensService: PersonagensService,
+    private locaisService: LocaisService,
+    private episodiosService: EpisodiosService,
+  ) { }
+
+  ngOnInit(): void {
+    this.listar(0, 1);
+    this.listar(1, 1);
+    this.listar(2, 1);
+  }
+
+  /**
+   * Método para consumir os dados da API e preencher os dados na aplicação.
+   *
+   * @param {number} tipoDado Number que receberá o tipo de dado que deve ser preenchido, sendo 0 &#x3D; personagem, 1 &#x3D; local, 2 &#x3D; episodio
+   * @param {number} page Number com a página atual da listagem
+   */
+  listar (tipoDado: number, page: number) {
+    console.log(&#x60;LISTANDO, TIPO: ${tipoDado}, PÁGINA: ${page}/${this.finalPage[tipoDado]}&#x60;)
+    switch(tipoDado){
+      case 0:
+        if (this.filtro !&#x3D; &quot;&quot;) {
+          this.personagensService.listar(page, this.filtro).subscribe(
+            data &#x3D;&gt; {
+              this.personagensDados &#x3D; this.personagensDados.concat(data.results);
+              this.finalPage[tipoDado] &#x3D; data.info.pages;
+            }
+          );
+        } else {
+          this.personagensService.listar(page).subscribe(
+            data &#x3D;&gt; {
+              this.personagensDados &#x3D; this.personagensDados.concat(data.results);
+              this.finalPage[tipoDado] &#x3D; data.info.pages;
+            }
+          ); 
+        }
+        break;
+      case 1:
+        if (this.filtro !&#x3D; &quot;&quot;) {
+          this.locaisService.listar(page, this.filtro).subscribe(
+            data &#x3D;&gt; {
+              this.locaisDados &#x3D; this.locaisDados.concat(data.results);
+              this.finalPage[tipoDado] &#x3D; data.info.pages;
+            }
+          );
+        } else {
+          this.locaisService.listar(page).subscribe(
+            data &#x3D;&gt; {
+              this.locaisDados &#x3D; this.locaisDados.concat(data.results);
+              this.finalPage[tipoDado] &#x3D; data.info.pages;
+            }
+          ); 
+        }
+        break;
+      case 2:
+        if (this.filtro !&#x3D; &quot;&quot;) {
+          this.episodiosService.listar(page, this.filtro).subscribe(
+            data &#x3D;&gt; {
+              this.episodiosDados &#x3D; this.episodiosDados.concat(data.results);
+              this.finalPage[tipoDado] &#x3D; data.info.pages;
+            }
+          );
+        } else {
+          this.episodiosService.listar(page).subscribe(
+            data &#x3D;&gt; {
+              this.episodiosDados &#x3D; this.episodiosDados.concat(data.results);
+              this.finalPage[tipoDado] &#x3D; data.info.pages;
+            }
+          ); 
+        }
+        break;
+    }
+  }
+
+  /**
+   * Método acionado quando o filtro é atualizado, limpando os dados atuais e consumindo os novos com a nova pesquisa.
+   *
+   * @param {*} e
+   */
+  applyFilter(e: any) {
+    this.filtro &#x3D; e.target.value;
+    this.page &#x3D; [ 1, 1, 1 ];
+    this.personagensDados &#x3D; [];
+    this.locaisDados &#x3D; [];
+    this.episodiosDados &#x3D; [];
+    this.listar(this.selected, this.page[this.selected]);
+  }
+
+  /**
+   * Método acionado quando a tab é atualizada. Quando o selected está numa lista, as outras não são carregadas
+   *
+   * @param {*} e
+   */
+  changeSelectedTab (e: any) {
+    this.selected &#x3D; e;
+  }
+
+  /**
+   * Método acionado quando o componente de lista disparar um scroll. Carrega novos dados, caso hajam, e adicionam a lista.
+   *
+   * @param {number} tipoDado Number que receberá o tipo de dado que deve ser preenchido, sendo 0 &#x3D; personagem, 1 &#x3D; local, 2 &#x3D; episodio
+   */
+  scroll(tipoDado: number) {
+    console.log(&#x60;Scrollando (${tipoDado})...&#x60;)
+    if (this.page[tipoDado] &lt; this.finalPage[tipoDado]){
+      this.page[tipoDado]++;
+      this.listar(tipoDado, this.page[tipoDado]);
+    }
+  }
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- 
+    Componente principal da aplicação, com uma lista com os dados resgatados da API e um filtro de pesquisa que filtrará os dados baseados no atributo &quot;name&quot; de cada um.
+--&gt;
+
+&lt;div class&#x3D;&quot;d-flex flex-column align-center mx-5 my-4 align-items-center&quot;&gt;
+
+    &lt;!-- Filtro de pesquisa que utiliza o atributo &quot;name&quot; da API --&gt;
+
+    &lt;mat-form-field class&#x3D;&quot;align-middle w-50&quot;&gt;
+        &lt;mat-label &gt;Pesquisar&lt;/mat-label&gt;
+        &lt;input matInput (keyup)&#x3D;&quot;applyFilter($event)&quot; placeholder&#x3D;&quot;Digite o que deseja pesquisar&quot; #input&gt;
+    &lt;/mat-form-field&gt;
+
+    &lt;!-- Tabs das diferentes listas providas pela API --&gt;
+
+    &lt;mat-tab-group (selectedIndexChange)&#x3D;&quot;changeSelectedTab($event)&quot; class&#x3D;&quot;w-75 align-middle&quot;&gt;
+        &lt;mat-tab label&#x3D;&quot;Personagens&quot;&gt; 
+            &lt;app-lista *ngIf&#x3D;&quot;selected &#x3D;&#x3D; 0&quot; [tipoDado]&#x3D;&quot;0&quot; [data]&#x3D;&quot;personagensDados&quot; [displayedColumns]&#x3D;&quot;personagensColumns&quot; (scrollFimPagina)&#x3D;&quot;scroll($event)&quot;&gt;&lt;/app-lista&gt;    
+        &lt;/mat-tab&gt;
+        &lt;mat-tab label&#x3D;&quot;Locais&quot;&gt; 
+            &lt;app-lista *ngIf&#x3D;&quot;selected &#x3D;&#x3D; 1&quot; [tipoDado]&#x3D;&quot;1&quot; [data]&#x3D;&quot;locaisDados&quot; [displayedColumns]&#x3D;&quot;locaisColumns&quot; (scrollFimPagina)&#x3D;&quot;scroll($event)&quot;&gt;&lt;/app-lista&gt;
+        &lt;/mat-tab&gt;
+        &lt;mat-tab label&#x3D;&quot;Episódios&quot;&gt; 
+            &lt;app-lista *ngIf&#x3D;&quot;selected &#x3D;&#x3D; 2&quot; [tipoDado]&#x3D;&quot;2&quot; [data]&#x3D;&quot;episodiosDados&quot; [displayedColumns]&#x3D;&quot;episodiosColumns&quot; (scrollFimPagina)&#x3D;&quot;scroll($event)&quot;&gt;&lt;/app-lista&gt;
+        &lt;/mat-tab&gt;
+    &lt;/mat-tab-group&gt;
+
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./home.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!--     Componente principal da aplicação, com uma lista com os dados resgatados da API e um filtro de pesquisa que filtrará os dados baseados no atributo "name" de cada um.--><div class="d-flex flex-column align-center mx-5 my-4 align-items-center">    <!-- Filtro de pesquisa que utiliza o atributo "name" da API -->    <mat-form-field class="align-middle w-50">        <mat-label >Pesquisar</mat-label>        <input matInput (keyup)="applyFilter($event)" placeholder="Digite o que deseja pesquisar" #input>    </mat-form-field>    <!-- Tabs das diferentes listas providas pela API -->    <mat-tab-group (selectedIndexChange)="changeSelectedTab($event)" class="w-75 align-middle">        <mat-tab label="Personagens">             <app-lista *ngIf="selected == 0" [tipoDado]="0" [data]="personagensDados" [displayedColumns]="personagensColumns" (scrollFimPagina)="scroll($event)"></app-lista>            </mat-tab>        <mat-tab label="Locais">             <app-lista *ngIf="selected == 1" [tipoDado]="1" [data]="locaisDados" [displayedColumns]="locaisColumns" (scrollFimPagina)="scroll($event)"></app-lista>        </mat-tab>        <mat-tab label="Episódios">             <app-lista *ngIf="selected == 2" [tipoDado]="2" [data]="episodiosDados" [displayedColumns]="episodiosColumns" (scrollFimPagina)="scroll($event)"></app-lista>        </mat-tab>    </mat-tab-group></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DetalhesComponent', 'selector': 'app-detalhes'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ListaComponent', 'selector': 'app-lista'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomeComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

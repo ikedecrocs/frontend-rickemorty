@@ -4,30 +4,37 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IService } from '../interface/iservice';
 
+/**
+ * Service para recuperação de dados de personagens.
+ *
+ * @export
+ * @class PersonagensService
+ * @typedef {PersonagensService}
+ * @implements {IService}
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class PersonagensService implements IService {
 
-  /*
-    Service para recuperação de dados de personagens.
-
-    apiUrl: url da api no enviroment atual.
-  */
-
+  /**
+   * URL da api no enviroment atual.
+   *
+   * @type {string}
+   */
   apiUrl: string = environment.apiUrl;
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
-  /* 
-    Método para listagem genérica de personagens.
-
-    page: página que será consumida.
-    filtro: filtro que será utilizado na pesquisa, caso exista.
-  */
-
+  /**
+   * Método para listagem genérica de personagens.
+   *
+   * @param {number} page Pagina a ser consumida.
+   * @param {?String} [filtro] Filtro a ser utilizado no consumo da API.
+   * @returns {Observable<any>} Observable com o resultado da pesquisa.
+   */
   listar (page: number, filtro?: String): Observable<any> {
     if (filtro) {
       return this.httpClient.get<any[]>(`${this.apiUrl}/character/?page=${page}&name=${filtro}`);
@@ -36,22 +43,22 @@ export class PersonagensService implements IService {
     }
   }
 
-  /* 
-    Método para recuperar informações de um único personagem utilizando o ID.
-
-    id: id do dado que será recuperado.
-  */
-
+  /**
+   * Método para recuperar informações de um único personagem utilizando o ID.
+   *
+   * @param {number} id ID do dado que será recuperado.
+   * @returns {Observable<any>} Observable com o resultado da pesquisa.
+   */
   listarUnico (id: number): Observable<any> {
     return this.httpClient.get<any[]>(`${this.apiUrl}/character/${id}`);
   }
 
-  /*
-    Método para recuperar informações de um único personagem utilizando a URL da API.
-
-    url: URL que será consumida.
-  */
-
+  /**
+   * Método para recuperar informações de um único personagem utilizando a URL da API.
+   *
+   * @param {string} url URL que será consumida.
+   * @returns {Observable<any>} Observable com o resultado da pesquisa.
+   */
   listarUnicoPorUrl (url: string): Observable<any> {
     return this.httpClient.get<any[]>(url);
   }
