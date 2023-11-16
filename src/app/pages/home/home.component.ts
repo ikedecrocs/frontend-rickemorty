@@ -84,7 +84,8 @@ export class HomeComponent implements OnInit {
   episodiosColumns: TableHeader[] = columnsDisplayEpisode
 
   /**
-   * String que receberá o valor do filtro para realizar a filtragem nos dados da lista.
+   * String que receberá o valor do filtro para realizar a filtragem nos dados da lista. Utiliza o campo "name" da API para realizar a busca,
+   * independente do tipo de dado
    *
    * @type {String}
    */
@@ -166,7 +167,8 @@ export class HomeComponent implements OnInit {
   }
 
   /**
-   * Método acionado quando o filtro é atualizado, limpando os dados atuais e consumindo os novos com a nova pesquisa.
+   * Método acionado quando o filtro é atualizado, limpando os dados atuais e consumindo os novos com a nova pesquisa. Utiliza o campo "name" da API para realizar a busca,
+   * independente do tipo de dado.
    *
    * @param {*} e
    */
