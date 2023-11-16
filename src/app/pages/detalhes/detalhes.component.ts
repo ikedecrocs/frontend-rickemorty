@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { columnsDisplayCharacter, columnsDisplayEpisode } from 'src/app/core/consts/columns-display';
 import { IService } from 'src/app/core/interface/iservice';
 import { TableHeader } from 'src/app/core/model/table-header.model';
 import { EpisodiosService } from 'src/app/core/services/episodios.service';
@@ -13,28 +14,28 @@ import { PersonagensService } from 'src/app/core/services/personagens.service';
 })
 export class DetalhesComponent implements OnInit {
 
+  /*
+    Componente para mostrar os detalhes do dado recebido pela URL (/detalhes/:tipo/:id)
+
+    tipoDado: number, seria o tipo do dado que terá seus detalhes exibidos, sendo eles: 0 = personagem, 1 = local, 2 = episódio. Recebido pela URL (:tipo).
+    idDado: number, id do dado que terá seus detalhes exibidos. Recebido pela URL (:id).
+    services: array de IService que serão as services disponíveis dentro do componente.
+    dado: Dado que será exibido.
+    listaSecundária: Dados que serão exibidos na lista dentro do dado exibido, podendo ser de personagens ou episódios.
+    personagensColumns: Ids e Displays dos headers das colunas dentro da lista de personagens.
+    episodiosColumns: Ids e Displays dos headers das colunas dentro da lista de episodios.
+  */
+
   tipoDado: number = 0;
   idDado: number = 0;
   services: IService[] = [];
   dado: any;
   listaSecundaria: any[] = [];
-  carregado = false;
 
-  episodiosColumns: TableHeader[] = [
-    { id: "id", display: "ID" },
-    { id: "name", display: "Nome" },
-    { id: "air_date", display: "Data de lançamento" },
-    { id: "episode", display: "Episódio" },
-  ];
+  episodiosColumns: TableHeader[] = columnsDisplayEpisode;
+  personagensColumns: TableHeader[] = columnsDisplayCharacter;
 
-  personagensColumns: TableHeader[] = [
-    { id: "id", display: "ID" },
-    { id: "name", display: "Nome" },
-    { id: "status", display: "Status" },
-    { id: "species", display: "Espécie" },
-    { id: "gender", display: "Genêro" },
-  ];
-
+  // Injeção das services para envio ao componente
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -48,9 +49,13 @@ export class DetalhesComponent implements OnInit {
     this.services[2] = this.episodiosService;
   }
 
+  // Carregando as informações do dado que será exibido na tela quando o componente é iniciado
+
   ngOnInit(): void {
     this.carregarInformacoes();
   }
+
+  // Método que irá carregar as informações do dado que será exibido na tela.
 
   carregarInformacoes() {
     this.activatedRoute.params.subscribe(
@@ -67,6 +72,13 @@ export class DetalhesComponent implements OnInit {
     )
   }
 
+  /*
+    Método para redirecionar para outras páginas de detalhes.
+
+    url: string que receberá a URL que será acessada para carregar o novo dado.
+    tipoDado: number com o tipo do dado que irá ser carregado na nova página.
+  */
+
   redirecionar(url: string, tipoDado: number) {
     this.services[tipoDado].listarUnicoPorUrl(url).subscribe(
       data => {
@@ -75,6 +87,8 @@ export class DetalhesComponent implements OnInit {
     )
   }
 
+  // Método para carregar a lista secundária do dado
+  
   recuperarLista() {
     this.listaSecundaria = [];
     switch(this.tipoDado) {

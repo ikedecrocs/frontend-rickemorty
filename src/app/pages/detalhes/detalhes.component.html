@@ -1,4 +1,10 @@
+<!-- 
+    Página com os detalhes específicos de cada personagem, local ou episódio.
+    Utiliza-se um ngSwitch com o tipo de dado recebido pela url para saber quais inforamções serão exibidas
+ -->
+
 <div [ngSwitch]="tipoDado" *ngIf="dado" class="px-5 py-2">
+
     <div *ngSwitchCase=0>
         <div class="text-center">
             <img [src]="dado.image">   
@@ -13,8 +19,8 @@
         <p (click)="redirecionar(dado.location.url, 1)" class="texto-link"><b>Visto pela última vez em:</b> {{dado.location.name}}</p>
         <p><b>Episódios em que aparece:</b></p>
         <app-lista [displayedColumns]="episodiosColumns" [data]="listaSecundaria" [tipoDado]="2" *ngIf="this.listaSecundaria"></app-lista>
-            
     </div>
+
     <div *ngSwitchCase=1>
         <p><b>ID:</b> {{dado.id}}</p>
         <p><b>Nome:</b> {{dado.name}}</p>
@@ -23,6 +29,7 @@
         <p><b>Residentes:</b></p>
         <app-lista [displayedColumns]="personagensColumns" [data]="listaSecundaria" [tipoDado]="0" *ngIf="this.listaSecundaria"></app-lista>
     </div>
+
     <div *ngSwitchCase=2>
         <p><b>ID:</b> {{dado.id}}</p>
         <p><b>Nome:</b> {{dado.name}}</p>
@@ -31,4 +38,5 @@
         <p><b>Personagens neste episódio:</b></p>
         <app-lista [displayedColumns]="personagensColumns" [data]="listaSecundaria" [tipoDado]="0" *ngIf="this.listaSecundaria"></app-lista>
     </div>
+    
 </div>

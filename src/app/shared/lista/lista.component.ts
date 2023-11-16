@@ -12,6 +12,12 @@ export class ListaComponent implements OnInit {
   /*
     Componente para listagem. Recebe as colunas que devem ser exibidas como "displayedColumns" e
     a service que irá resgatar os dados para o consumo da tabela como "service".
+
+    displayedColumns: Array de TableHeader, seriam as colunas da tabela, sendo que id é o valor que que puxará os valores da API e display que será o valor que será mostrado
+    no header da coluna.
+    tipoDado: number, seria o tipo do dado que a lista está exibindo, sendo eles: 0 = personagem, 1 = local, 2 = episódio.
+    data: Array de any, dados que serão exibidos na tabela.
+    scrollFimPagina: EventEmitter que será disparado ao componente pai quando a tabela chegar no fim de seu scroll.
   */
 
   @Input() displayedColumns!: TableHeader[];
@@ -28,7 +34,6 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
     // Mapping realizado no OnInit pois não é possível realizá-lo diretamente no destino (HTML)
     this.columnsToDisplay = this.displayedColumns.map((column) => (column).id);
-    console.log(this.data);
   }
 
   /* 
@@ -56,7 +61,6 @@ export class ListaComponent implements OnInit {
   */
 
   abrirDetalhes(id: number) {
-    console.log(`Abrindo nova página: detalhes/${this.tipoDado}/${id}`);
     this.router.navigate([`detalhes/${this.tipoDado}/${id}`]);
   }
 
